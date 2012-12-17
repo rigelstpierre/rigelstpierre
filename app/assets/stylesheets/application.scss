@@ -1,0 +1,84 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require_self
+ *= require_tree .
+ */
+
+@font-face {
+    font-family: 'FlamaSemicondensedMedium';
+    src: url('/assets/fonts/flamasemicondensed-medium-webfont.eot');
+    src: url('/assets/fonts/flamasemicondensed-medium-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/flamasemicondensed-medium-webfont.woff') format('woff'),
+         url('/assets/fonts/flamasemicondensed-medium-webfont.ttf') format('truetype'),
+         url('/assets/fonts/flamasemicondensed-medium-webfont.svg#FlamaSemicondensedMedium') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'FlamaUltracondensedBook';
+    src: url('/assets/fonts/flamaultracondensed-book-webfont.eot');
+    src: url('/assets/fonts/flamaultracondensed-book-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/flamaultracondensed-book-webfont.woff') format('woff'),
+         url('/assets/fonts/flamaultracondensed-book-webfont.ttf') format('truetype'),
+         url('/assets/fonts/flamaultracondensed-book-webfont.svg#FlamaUltracondensedBook') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'TisaOTBold';
+    src: url('/assets/fonts/tisaot-bold-webfont.eot');
+    src: url('/assets/fonts/tisaot-bold-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/tisaot-bold-webfont.woff') format('woff'),
+         url('/assets/fonts/tisaot-bold-webfont.ttf') format('truetype'),
+         url('/assets/fonts/tisaot-bold-webfont.svg#TisaOTBold') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'TisaOTRegular';
+    src: url('/assets/fonts/tisaot-webfont.eot');
+    src: url('/assets/fonts/tisaot-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/assets/fonts/tisaot-webfont.woff') format('woff'),
+         url('/assets/fonts/tisaot-webfont.ttf') format('truetype'),
+         url('/assets/fonts/tisaot-webfont.svg#TisaOTRegular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+
+}
+
+
+body {
+  background: image-url('bg.png') repeat;
+}
+
+.container {
+  width: 960px;
+  margin: 0 auto;
+}
+
+nav {
+  img {
+    float: left;
+  }
+  margin: 25px 0;
+  ul {
+    float: right;
+    li {
+      display: inline;
+    }
+  }
+}

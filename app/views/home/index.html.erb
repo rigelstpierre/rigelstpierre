@@ -1,0 +1,17 @@
+
+  <nav>
+    <a href="/"><img src="/assets/logo.png" alt="logo" /> </a>
+    <ul>
+      <% @pages.each do |page| %>
+        <li><%= link_to page.title, page %></li>
+      <% end %>
+    </ul>
+  </nav>
+
+  <section>
+    <% @posts.each do |post| %>
+      <article>
+        <h3><%= link_to post.title, title %></h3>
+      </article>
+    <% end %>
+  </section>
