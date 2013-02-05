@@ -1,84 +1,131 @@
 /*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
+ * This is a manifest file that'll automatically include all the stylesheets available in this directory
+ * and any sub-directories. You're free to add application-wide styles to this file and they'll appear at
+ * the top of the compiled file, but it's generally better to create a new file per style scope.
  *= require_self
  *= require_tree .
- */
-
-@font-face {
-    font-family: 'FlamaSemicondensedMedium';
-    src: url('/assets/fonts/flamasemicondensed-medium-webfont.eot');
-    src: url('/assets/fonts/flamasemicondensed-medium-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/assets/fonts/flamasemicondensed-medium-webfont.woff') format('woff'),
-         url('/assets/fonts/flamasemicondensed-medium-webfont.ttf') format('truetype'),
-         url('/assets/fonts/flamasemicondensed-medium-webfont.svg#FlamaSemicondensedMedium') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'FlamaUltracondensedBook';
-    src: url('/assets/fonts/flamaultracondensed-book-webfont.eot');
-    src: url('/assets/fonts/flamaultracondensed-book-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/assets/fonts/flamaultracondensed-book-webfont.woff') format('woff'),
-         url('/assets/fonts/flamaultracondensed-book-webfont.ttf') format('truetype'),
-         url('/assets/fonts/flamaultracondensed-book-webfont.svg#FlamaUltracondensedBook') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'TisaOTBold';
-    src: url('/assets/fonts/tisaot-bold-webfont.eot');
-    src: url('/assets/fonts/tisaot-bold-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/assets/fonts/tisaot-bold-webfont.woff') format('woff'),
-         url('/assets/fonts/tisaot-bold-webfont.ttf') format('truetype'),
-         url('/assets/fonts/tisaot-bold-webfont.svg#TisaOTBold') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
-
-@font-face {
-    font-family: 'TisaOTRegular';
-    src: url('/assets/fonts/tisaot-webfont.eot');
-    src: url('/assets/fonts/tisaot-webfont.eot?#iefix') format('embedded-opentype'),
-         url('/assets/fonts/tisaot-webfont.woff') format('woff'),
-         url('/assets/fonts/tisaot-webfont.ttf') format('truetype'),
-         url('/assets/fonts/tisaot-webfont.svg#TisaOTRegular') format('svg');
-    font-weight: normal;
-    font-style: normal;
-
-}
+*/
 
 
 body {
-  background: image-url('bg.png') repeat;
+  background: image-url('bg.png') no-repeat #17152c;
+  background-size: 75%;
+}
+
+h1, h2, h3, h4, h5, h6, p, a {
+  font-family: 'Monaco';
+  color: #62c5d7;
 }
 
 .container {
   width: 960px;
-  margin: 0 auto;
+  margin: 0 0 0 50px;
 }
 
 nav {
+  margin-top: 22px;
+  ul {
+    li {
+      border-right: #62c5d7 2px solid;
+      display: inline;
+      a {
+        color: #62c5d7;
+        font-size: 16px;
+        text-decoration: none;
+        margin-left: 22px;
+        margin-right: 22px;
+        font-weight: normal;
+        &:hover {
+          color: #62c5d7;
+          text-decoration: underline;
+        }
+        &:visited {
+          color: #62c5d7;
+        }
+      }
+      &:first-child {
+        margin-left: 0px;
+      }
+      &:last-child {
+        border-right: none;
+      }
+    }
+
+  }
+}
+
+.title-card {
+  width: 850px;
+  height: 170px;
+  background: #29254d;
+  border-radius: 5px;
   img {
+    margin: 15px;
     float: left;
   }
-  margin: 25px 0;
-  ul {
-    float: right;
-    li {
-      display: inline;
+  p {
+    color: #a692e2;
+    text-align: right;
+    font-size: 18px;
+    line-height: 30px;
+    padding-top: 50px;
+    padding-right: 15px;
+    .red {
+      color: #c56468;
+    }
+    .green {
+      color: #a6b169;
+    }
+    a {
+      color: #ebc879;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
     }
   }
 }
+
+.work {
+  ul {
+    list-style: none;
+    li {
+      clear: both;
+      a {
+        text-decoration: none;
+        &:hover {
+          background: #29254d;
+        }
+        p {
+          background: #29254d;
+          width: 62px;
+          height: 42px;
+          border-radius: 30px;
+          text-align: center;
+          font-size: 18px;
+          color: #a692e2;
+          padding-top: 20px;
+          float: left;
+          margin-right: 25px;
+        }
+        h2 {
+          color: #62c5d7;
+          font-size: 18px;
+          line-height: 10px;
+          padding-top: 35px;
+          margin-left: 15px;
+        }
+        h3 {
+          color: #a692e2;
+          line-height: 10px;
+        }
+      }
+      // &:hover {
+      //     background: #29254d;
+      // }
+    }
+  }
+}
+
+
+

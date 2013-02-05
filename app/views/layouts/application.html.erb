@@ -8,6 +8,17 @@
 </head>
 <body>
   <div class="container">
+    <nav>
+      <ul>
+        <li><%= link_to "home", root_path %></li>
+        <li><%= link_to "work", portfolios_path %></li>
+        <li><%= link_to "blog", posts_path %></li>
+        <li><a href="#">contact</a></li>
+      </ul>
+      <ul>
+
+      </ul>
+    </nav>
     <%= yield %>
   </div>
 </body>

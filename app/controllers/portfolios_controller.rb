@@ -1,4 +1,6 @@
 class PortfoliosController < ApplicationController
+   before_filter :authorize, except: [:show, :index]
+
   # GET /portfolios
   # GET /portfolios.json
   def index
